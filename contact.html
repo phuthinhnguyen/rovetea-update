@@ -26,6 +26,7 @@
     <script src="js/HTMLImporter.js"></script>
     <script src="js/jquery-3.6.4.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <style>
         #contact-nav {
             color: #d40e8c;
@@ -49,34 +50,78 @@
                     <div class="contactus-content-item-wrap">
                         <div class="contactus-content-item-left">
                             <label for="">First name <span style="color: red;">*</span></label>
-                            <input placeholder="First name"></input>
+                            <input placeholder="First name" id="contact-firstname"></input>
                             <label for="">Email <span style="color: red;">*</span></label>
-                            <input placeholder="example@gmail.com"></input>
+                            <input placeholder="example@gmail.com" id="contact-email"></input>
                         </div>
                         <div class="contactus-content-item-right">
                             <label for="">Last name <span style="color: red;">*</span></label>
-                            <input placeholder="Last name"></input>
+                            <input placeholder="Last name" id="contact-lastname"></input>
                             <label for="">Phone <span style="color: red;">*</span></label>
-                            <input placeholder="123-456-7890"></input>
+                            <input placeholder="123-456-7890" id="contact-phone"></input>
                         </div>
                     </div>
                     <div class="contactus-content-item-textarea">
                         <label for="">Message <span style="color: red;">*</span></label>
-                        <textarea name="" id="" cols="30" rows="4" placeholder="Message"></textarea>
+                        <textarea name="" cols="30" rows="4" placeholder="Message" id="contact-message"></textarea>
                     </div>
                     <div class="contactus-content-item-button">
-                        <button>Send</button>
+                        <button onclick="submit(); return false">Send</button>
                     </div>
 
                 </div>
             </div>
         </div>
     </div>
-
+    <script>
+        function submit() {
+            var firstname = document.getElementById("contact-firstname");
+            var lastname = document.getElementById("contact-lastname");
+            var email = document.getElementById("contact-email");
+            var phone = document.getElementById("contact-phone");
+            var message = document.getElementById("contact-message");
+            if (firstname.value != "" && lastname.value != "" && email.value != "" && phone.value != "" && message.value!=""){
+                Email.send({
+                Host : "smtp.elasticemail.com",
+                Username : "bobatearove@gmail.com",
+                Password : "2E20A40A5D15EF1FE911CBEE4CC33AACC49C",
+                To : 'contact@smartcardhub.com',
+                From : "bobatearove@gmail.com",
+                Subject : "Contact to Rove Boba Tea",
+                Body : `[From: ${firstname.value}, ${lastname.value},${phone.value}, ${email.value}]<br>${message.value}`
+                }).then(message=>{
+                    if (message=="OK"){
+                        $('.toast').toast("show")
+                    }
+                })
+                firstname.value="";
+                lastname.value="";
+                phone.value="";
+                email.value="";
+                message.value="";
+            }  
+        }
+    </script>
 
     <!-- Footer -->
     <script>HTMLImporter.import("footer.html");</script>
-
+    
+    <!-- toast -->
+    <div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center toast-container-res" style="position: fixed;top: 50%;right: 50%;transform: translate(50%,-50%);">
+        <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-delay="3000">
+          <div class="toast-header d-flex justify-content-between" style="background-color: #d40e8c;">
+            <div>
+                <img src="img/rove_logo_white_background.png" class="rounded mr-2" alt="..." style="width:25px;height: 25px;margin-right: 5px;">
+                <strong class="mr-auto" style="color: black;font-weight: 500;">Rove Boba Tea</strong>
+            </div>
+            <!-- <button type="button" class="close ml-2 mb-1" data-bs-dismiss="toast"></button> -->
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="toast-body">Your e-mail has been sent.</div>
+        </div>
+    </div>
 </body>
 
 </html>
