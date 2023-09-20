@@ -2,7 +2,9 @@
 @import "mixin";
 
 
-
+.category-item{
+    text-transform: uppercase;
+}
 .category {
     width: 100%;
     font-family: $font-family-sans-serif;
@@ -50,11 +52,15 @@
                     flex: 1;
                     h3{
                         font-size: 20px;
+                        text-transform: capitalize;
                     }
                     h5{
                         color: $primary;
                         margin-top: 12px;
                         font-size: 19px;
+                    }
+                    p{
+                        font-style: italic;
                     }
                 }
             }

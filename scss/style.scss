@@ -1,6 +1,5 @@
 @import "variable";
 @import "mixin";
-@import "bootstrap/scss/bootstrap";
 
 
 
@@ -191,13 +190,15 @@ h6,
 
         .hompage-menu-item {
             cursor: pointer;
-
-            p {
-                font-family: $font-family-sans-serif;
-                font-weight: 500;
-                font-size: 18px;
+            .hompage-menu-item-container{
+                p {
+                    font-family: $font-family-sans-serif;
+                    font-weight: 500;
+                    font-size: 18px;
+                    text-transform: uppercase;
+                }
             }
-
+           
         }
 
     }

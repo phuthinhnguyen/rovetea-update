@@ -161,13 +161,30 @@
         }
     }
 }
+@media screen and (max-width:650px) {
+    .contact {
+        .contact-wrap {
+            .contactus-content-container {
+                .contactus-content-item {
+                    .contactus-content-item-wrap {
+                        column-gap: 20px;
+                    }
+                }
+
+            }
+        }
+    }
+}
 @media screen and (max-width:500px) {
     .contact {
         .contact-wrap {
             .contactus-content-container {
                 .contactus-content-item {
                     .contactus-content-item-wrap {
-                        column-gap: 10px;
+                        display: block;
+                        .contactus-content-item-left,.contactus-content-item-right{
+                            width: 100%;
+                        }
                     }
                 }
 

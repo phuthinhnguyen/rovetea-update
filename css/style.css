@@ -9390,10 +9390,11 @@ h6,
 .hompage-menu-container .hompage-menu .hompage-menu-item {
   cursor: pointer;
 }
-.hompage-menu-container .hompage-menu .hompage-menu-item p {
+.hompage-menu-container .hompage-menu .hompage-menu-item .hompage-menu-item-container p {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 18px;
+  text-transform: uppercase;
 }
 
 .footer .link {

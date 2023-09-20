@@ -1,3 +1,7 @@
+.category-item {
+  text-transform: uppercase;
+}
+
 .category {
   width: 100%;
   font-family: "Poppins", sans-serif;
@@ -64,11 +68,15 @@
 }
 .category .category-wrap .category-wrap-item-top .item div h3 {
   font-size: 20px;
+  text-transform: capitalize;
 }
 .category .category-wrap .category-wrap-item-top .item div h5 {
   color: #d40e8c;
   margin-top: 12px;
   font-size: 19px;
+}
+.category .category-wrap .category-wrap-item-top .item div p {
+  font-style: italic;
 }
 
 @media screen and (max-width: 1150px) {
