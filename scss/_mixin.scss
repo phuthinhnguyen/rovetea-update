@@ -1,0 +1,39 @@
+@mixin title {
+    font-family: $font-family-sans-serif;
+    color: $secondary;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 80px;
+    margin-top: 50px;
+    &::after{
+        content:"";
+        display: block;
+        width: 120px;
+        height: 4px;
+        background-color: $primary;
+        margin: auto;
+        margin-top: 20px;
+    }
+
+}
+
+@mixin button {
+    height: 40px;
+    width: 200px;
+    padding: 10px;
+    color: $light;
+    background-color: $primary;
+    font-family: $font-family-sans-serif;
+    font-size: 18px;
+    border-radius: 30px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+
+    &:hover {
+        background-color: $third;
+        border: 1px solid $light;
+    }
+}

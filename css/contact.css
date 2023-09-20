@@ -1,0 +1,167 @@
+.contact {
+  background-color: white;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  margin-top: -80px;
+  padding-top: 60px;
+}
+.contact .contact-wrap {
+  max-width: 1280px;
+  padding: 40px 30px;
+  margin: auto;
+}
+.contact .contact-wrap h2 {
+  font-family: "Poppins", sans-serif;
+  color: black;
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 80px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+.contact .contact-wrap h2::after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 4px;
+  background-color: #d40e8c;
+  margin: auto;
+  margin-top: 20px;
+}
+.contact .contact-wrap .contactus-content-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  -moz-column-gap: 150px;
+       column-gap: 150px;
+  margin-top: 80px;
+}
+.contact .contact-wrap .contactus-content-container .contactus-content-item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.contact .contact-wrap .contactus-content-container .contactus-content-item p {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  color: black;
+  margin-bottom: 40px;
+}
+.contact .contact-wrap .contactus-content-container .contactus-content-item .contactus-content-item-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  -moz-column-gap: 60px;
+       column-gap: 60px;
+  width: 100%;
+}
+.contact .contact-wrap .contactus-content-container .contactus-content-item .contactus-content-item-wrap .contactus-content-item-left,
+.contact .contact-wrap .contactus-content-container .contactus-content-item .contactus-content-item-wrap .contactus-content-item-right {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 50%;
+}
+.contact .contact-wrap .contactus-content-container .contactus-content-item .contactus-content-item-wrap .contactus-content-item-left label,
+.contact .contact-wrap .contactus-content-container .contactus-content-item .contactus-content-item-wrap .contactus-content-item-right label {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  color: black;
+  margin-bottom: 10px;
+}
+.contact .contact-wrap .contactus-content-container .contactus-content-item .contactus-content-item-wrap .contactus-content-item-left input,
+.contact .contact-wrap .contactus-content-container .contactus-content-item .contactus-content-item-wrap .contactus-content-item-right input {
+  width: 100%;
+  border-radius: 10px;
+  font-size: 14px;
+  height: 40px;
+  margin-bottom: 30px;
+  padding-left: 10px;
+  border: 2px solid black;
+  outline: none;
+}
+.contact .contact-wrap .contactus-content-container .contactus-content-item .contactus-content-item-textarea {
+  width: 100%;
+}
+.contact .contact-wrap .contactus-content-container .contactus-content-item .contactus-content-item-textarea label {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  color: black;
+  margin-bottom: 10px;
+}
+.contact .contact-wrap .contactus-content-container .contactus-content-item .contactus-content-item-textarea textarea {
+  resize: none !important;
+  width: 100%;
+  border-radius: 10px;
+  border: 2px solid black;
+  outline: none;
+  padding-top: 10px;
+  padding-left: 10px;
+  font-size: 14px;
+}
+.contact .contact-wrap .contactus-content-container .contactus-content-item .contactus-content-item-button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.contact .contact-wrap .contactus-content-container .contactus-content-item .contactus-content-item-button button {
+  height: 40px;
+  width: 200px;
+  padding: 10px;
+  color: #FFFFFF;
+  background-color: #d40e8c;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  border-radius: 30px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+  margin-top: 40px;
+  width: 140px;
+}
+.contact .contact-wrap .contactus-content-container .contactus-content-item .contactus-content-item-button button:hover {
+  background-color: #39b54a;
+  border: 1px solid #FFFFFF;
+}
+
+@media screen and (max-width: 1199px) {
+  .contact .contact-wrap .contactus-content-container {
+    flex-direction: column;
+  }
+  .contact .contact-wrap .contactus-content-container .contactus-content-item {
+    width: 100%;
+  }
+  .contact .contact-wrap .contactus-content-container .contactus-content-item .contactus-map {
+    padding: 0;
+  }
+  .contact .contact-wrap .contactus-content-container .contactus-content-item .contactus-map .contactus-map-container {
+    width: 100%;
+    height: 100%;
+  }
+}
+@media screen and (max-width: 991px) {
+  .contact .contact-wrap {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .contact .row .last input {
+    width: 75%;
+  }
+  .contact .row .last button {
+    width: 15%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .contact .contact-wrap .contactus-content-container .contactus-content-item .contactus-content-item-wrap {
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+  }
+}

@@ -1,0 +1,168 @@
+.reviews {
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  background-color: #FFFFFF;
+  margin-top: -80px;
+  padding-top: 80px;
+}
+.reviews h2 {
+  font-family: "Poppins", sans-serif;
+  color: black;
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 80px;
+  margin-top: 50px;
+}
+.reviews h2::after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 4px;
+  background-color: #d40e8c;
+  margin: auto;
+  margin-top: 20px;
+}
+.reviews .reviews-wrap {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -moz-column-gap: 70px;
+       column-gap: 70px;
+  padding: 30px;
+  max-width: 1400px;
+  flex-direction: column;
+}
+.reviews .reviews-wrap .reviews-item {
+  width: 100%;
+}
+.reviews .reviews-wrap .reviews-item .slide,
+.reviews .reviews-wrap .reviews-item .slide-responsive {
+  width: 100%;
+  position: relative;
+}
+.reviews .reviews-wrap .reviews-item .slide .carousel-inner-res,
+.reviews .reviews-wrap .reviews-item .slide-responsive .carousel-inner-res {
+  display: none;
+}
+.reviews .reviews-wrap .reviews-item .slide .carousel-item-wrap,
+.reviews .reviews-wrap .reviews-item .slide-responsive .carousel-item-wrap {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: center;
+  align-items: center;
+  -moz-column-gap: 60px;
+       column-gap: 60px;
+  padding: 10px 200px;
+}
+.reviews .reviews-wrap .reviews-item .slide .item,
+.reviews .reviews-wrap .reviews-item .slide-responsive .item {
+  text-align: center;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.reviews .reviews-wrap .reviews-item .slide .item p,
+.reviews .reviews-wrap .reviews-item .slide-responsive .item p {
+  color: black;
+  font-size: 15px;
+}
+.reviews .reviews-wrap .reviews-item .slide .item h3,
+.reviews .reviews-wrap .reviews-item .slide-responsive .item h3 {
+  font-family: "Poppins", sans-serif;
+  color: black;
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 80px;
+  margin-top: 50px;
+  margin-top: 30px;
+  color: #d40e8c;
+  font-size: 22px;
+}
+.reviews .reviews-wrap .reviews-item .slide .item h3::after,
+.reviews .reviews-wrap .reviews-item .slide-responsive .item h3::after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 4px;
+  background-color: #d40e8c;
+  margin: auto;
+  margin-top: 20px;
+}
+.reviews .reviews-wrap .reviews-item .slide .item h3::after,
+.reviews .reviews-wrap .reviews-item .slide-responsive .item h3::after {
+  display: none;
+}
+.reviews .reviews-wrap .reviews-item .slide-responsive {
+  display: none;
+}
+.reviews .reviews-wrap .reviews-button {
+  display: flex;
+  justify-content: center;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+  margin-top: 30px;
+}
+.reviews .reviews-wrap .reviews-button button {
+  height: 40px;
+  width: 200px;
+  padding: 10px;
+  color: #FFFFFF;
+  background-color: #d40e8c;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  border-radius: 30px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+  color: white;
+}
+.reviews .reviews-wrap .reviews-button button:hover {
+  background-color: #39b54a;
+  border: 1px solid #FFFFFF;
+}
+
+@media screen and (max-width: 1100px) {
+  .reviews .reviews-wrap .reviews-item .slide .carousel-item-wrap {
+    padding: 10px 60px;
+  }
+  .reviews .reviews-wrap .reviews-item .slide .carousel-item-wrap #reviews-res {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .reviews .reviews-wrap .reviews-item .slide {
+    display: none;
+  }
+  .reviews .reviews-wrap .reviews-item .slide-responsive {
+    display: block;
+  }
+  .reviews .reviews-wrap .reviews-item .slide-responsive .carousel-item-wrap {
+    display: block;
+    padding: 40px;
+  }
+  .reviews .reviews-wrap .reviews-item .slide-responsive .item {
+    height: 300px;
+  }
+  .reviews .reviews-wrap .reviews-button button {
+    width: 160px;
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .reviews .reviews-wrap .reviews-button button {
+    width: 130px;
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .reviews .reviews-wrap .reviews-button button {
+    width: 110px;
+    font-size: 12px;
+  }
+}
